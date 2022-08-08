@@ -31,5 +31,43 @@ public class Main {
         }
 
         //Task 4
+        int deliveryDistance = 95;
+        int deliverDays = 1;
+        int interval = 40;
+        int startInterval = 20;
+        if (deliveryDistance <= startInterval) {
+            deliverDays = 1;
+        } else {
+            deliverDays += (int) Math.ceil((deliveryDistance - startInterval) / (double) interval);
+        }
+        System.out.println("Потребуется дней: " + deliverDays);
+
+        //Task 5
+        int monthNumber = 12;
+        switch (monthNumber) {
+            case 1:
+            case 2:
+            case 12:
+                System.out.println("Зима");
+                break;
+            case 3:
+            case 4:
+            case 5:
+                System.out.println("Весна");
+                break;
+            case 6:
+            case 7:
+            case 8:
+                System.out.println("Лето");
+                break;
+            case 9:
+            case 10:
+            case 11:
+                System.out.println("Осень");
+                break;
+            default:
+                System.out.println("Такого месяца нет!");
+                break;
+        }
         }
     }
